@@ -1,11 +1,11 @@
 import { createPool} from 'mysql2'
 
 const connection= createPool({
-    host: '',//Give IP or host name to connect the db
-    user: '',// userName
-    password: '',// password
-    database: '', // name
-    connectionLimit: 10, //optional
+    host: 'ls-4eec577f99943f4d88c82bd50ed1a273cfd8bb3a.ccp1qb7oyot1.ap-south-1.rds.amazonaws.com',
+    user: 'dbmasteruser',
+    password: 'MigoBucksDevDb$1',
+    database: 'payment',
+    connectionLimit: 10,
     multipleStatements: true
 })
 const db = connection.promise();
