@@ -4,7 +4,7 @@
   "description": "example apis",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --watch",
     "dev": "ts-node ./src/server.ts",
     "start": "nodemon ./dist/server.js"
   },
@@ -19,6 +19,7 @@
     "aws-sdk": "^2.820.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "crypto-js": "4.0.0",
     "dotenv": "8.2.0",
     "express": "^4.16.4",
     "http-status-codes": "^1.4.0",

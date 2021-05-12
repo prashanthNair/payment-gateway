@@ -5,20 +5,72 @@
  *      Initial_order:
  *        type: object
  *        properties:
- *          amount:
- *            type: number
- *            description: amount of order
  *          userId:
- *            type: number
+ *            type: integer
  *            description: userId
+ *          amount:
+ *            type: integer
+ *            description: amount of order
  *          currency:
  *            type: string
  *            description: currency of transaction
  *          receipt:
  *            type: string
- *            description: receipt name 
+ *            description: receipt name
  *          notes:
  *            type: object
+ *            description: Any extra information
+ */
+/**
+ * @swagger
+ *  components:
+ *    schemas:
+ *      Verify_payment:
+ *        type: object
+ *        properties:
+ *          paymentId:
+ *            type: string
+ *            description: razorpay payment_id returned after a payment success/failure
+ *          userId:
+ *            type: integer
+ *            description: userId
+ *          orderId:
+ *            type: string
+ *            description: razorpay order_id
+ *          signature:
+ *            type: string
+ *            description: razorpay signature to be verified
+ *          amount:
+ *            type: integer
+ *            description: amount of order
+ *          currency:
+ *            type: string
+ *            description: currency of transaction
+ *          paymentOrigin:
+ *            type: string
+ *            description: Origin of payment (buddy, user, brand etc)
+ *          notes:
+ *            type: object
+ *            description: Any extra information
+ */
+/**
+ * @swagger
+ *  components:
+ *    schemas:
+ *      Payment_fail:
+ *        type: object
+ *        properties:
+ *          userId:
+ *            type: integer
+ *            description: userId
+ *          orderId:
+ *            type: string
+ *            description: razorpay order_id
+ *          amount:
+ *            type: integer
+ *            description: Amount of payment
+ *          notes:
+ *            type: string
  *            description: Any extra information
  */
 /**
@@ -84,5 +136,5 @@
  *          application/json:
  *            schema:
  *              $ref: '#/components/schemas/FailureResponse'
- *      
+ *
  */
